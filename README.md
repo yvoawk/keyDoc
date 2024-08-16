@@ -31,25 +31,25 @@ This Python script allows you to search for specific keywords in a batch of PDF 
 
 1. **Clone the repository** (or download the script):
 
-   ```bash
+```bash
    git clone https://github.com/yvoawk/keyDoc.git
    cd keyDoc
-   ````
+````
 
 2. **Install the required Python libraries:**
 
 ```bash
-pip install PyPDF2 python-docx pandas
+  pip install PyPDF2 python-docx pandas
 ```
 ## Usage
 
 1. **Prepare the Keywords File:**
 Create a text file (`keywords.txt`) with each keyword on a new line. For example:
 
-```
-keyword1
-keyword2
-keyword3
+```txt
+  keyword1
+  keyword2
+  keyword3
 ```
 
 2. **Prepare the Documents Folder:**
@@ -59,7 +59,7 @@ Place all the **PDF** and **Word** documents you want to search in a single fold
 Use the following command to run the script:
 
 ````bash
-python3 detect.py keywords.txt documents_folder output.csv
+  python3 detect.py keywords.txt documents_folder output.csv
 ````
 
 - keywords.txt: Path to the text file containing the keywords.
@@ -70,22 +70,22 @@ python3 detect.py keywords.txt documents_folder output.csv
 
 Assume you have:
 
-    - A file named `keywords.txt` with the following content:
+  - A file named `keywords.txt` with the following content:
 
-```
-molestie
-lorem
-ipsum
+```txt
+  molestie
+  lorem
+  ipsum
 ```
 
-    - A folder named `docs` containing the following files:
-        - sample.pdf
-        - sample.docx
+  - A folder named `docs` containing the following files:
+    - sample.pdf
+    - sample.docx
 
 To search for the keywords in these documents, run the script:
 
 ```bash
-python detect.py keywords.txt docs output.csv
+  python detect.py keywords.txt docs output.csv
 ```
 
 The script will output the names of files containing the keywords to the console and save them to `output.csv`.
